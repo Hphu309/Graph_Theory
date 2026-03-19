@@ -4,9 +4,9 @@ Nhóm chúng tôi gồm **3 thành viên**, cùng nhau học tập và thực hi
 
 ## Thành viên
 
-1. **Hồ Khắc Ngọc Phú** – Trưởng nhóm
-2. **Nguyễn Huy Hùng** – Lập trình viên
-3. **Phan Nguyễn Quốc Dũng** – Lập trình viên
+1. **Hồ Khắc Ngọc Phú** 
+2. **Nguyễn Huy Hùng** 
+3. **Phan Nguyễn Quốc Dũng**
 
 ## Mục tiêu
 
