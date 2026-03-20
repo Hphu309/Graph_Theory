@@ -62,6 +62,7 @@ tảng học thuật đến triển khai thuật toán thực tế.
 
 
 ### [Một số bài tập ứng dụng](https://codeforces.com/group/n2atXbmeSj/contests)
+### [Solution](https://github.com/Hphu309/Graph_Theory/blob/main/Solution.pdf)
 
 ------------------------------------------------------------------------
 
