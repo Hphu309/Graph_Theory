@@ -57,7 +57,7 @@ tảng học thuật đến triển khai thuật toán thực tế.
 -   [Spanning Tree, Minimum Spanning Tree (Kruskal, Prim), LCA](https://github.com/Hphu309/Graph_Theory/blob/main/Cay_khung_LCA_theory.pdf)
 
 
-### 4️⃣ Quy hoạch động trên đồ thị
+### 4️⃣ Quy hoạch động trên cây
 -   [Thuật toán quy hoạch động trên cây](https://github.com/Hphu309/Graph_Theory/blob/main/Dp_on_tree_theory.pdf)
 
 ------------------------------------------------------------------------
