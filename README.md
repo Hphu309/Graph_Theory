@@ -54,9 +54,12 @@ tảng học thuật đến triển khai thuật toán thực tế.
 -   Floyd-Warshall
 
 ### 4️⃣ Cây và đồ thị liên thông
+
+-   Spanning Tree
+-   Minimum Spanning Tree (Kruskal, Prim)
 -   Disjoint Set Union (Union-Find)
 
-### 6️⃣ Quy hoạch động trên đồ thị
+### 5️⃣ Quy hoạch động trên đồ thị
 -   DP trên cây
 
 ------------------------------------------------------------------------
