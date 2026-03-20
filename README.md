@@ -43,7 +43,7 @@ tảng học thuật đến triển khai thuật toán thực tế.
 -   BFS, loang bảng (Breadth-First Search)
 -   Ứng dụng duyệt đồ thị
 
-⇒  [Lý thuyết đồ thị](https://github.com/Hphu309/Graph_Theory/blob/main/Graph.pdf)
+⇒  [Đồ thị và duyệt đồ thị](https://github.com/Hphu309/Graph_Theory/blob/main/Graph.pdf)
 
 
 ### 2️⃣ Đường đi ngắn nhất và loang bảng
@@ -59,6 +59,7 @@ tảng học thuật đến triển khai thuật toán thực tế.
 
 ### 4️⃣ Quy hoạch động trên đồ thị
 -   DP trên cây ⇒ [Thuật toán quy hoạch động trên cây](https://github.com/Hphu309/Graph_Theory/blob/main/Dp_on_tree_theory.pdf)
+
 
 
 ### [Một số bài tập ứng dụng](https://codeforces.com/group/n2atXbmeSj/contests)
