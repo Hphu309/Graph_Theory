@@ -48,22 +48,22 @@ tảng học thuật đến triển khai thuật toán thực tế.
 
 ### 2️⃣ Đường đi ngắn nhất và loang bảng
 
--   Dijkstra ⇒ [Lý thuyết Dijkstra](https://github.com/Hphu309/Graph_Theory/blob/main/Dijkstra_theory.pdf)
--   Floyd-Warshall, Loang bảng (BFS) ⇒ [Lý thuyết Floyd, loang bảng](https://github.com/Hphu309/Graph_Theory/blob/main/Floyd_Loang.pdf)
+-   [Dijkstra](https://github.com/Hphu309/Graph_Theory/blob/main/Dijkstra_theory.pdf)
+-   [Floyd-Warshall, Loang bảng (BFS)](https://github.com/Hphu309/Graph_Theory/blob/main/Floyd_Loang.pdf)
 
 ### 3️⃣ Cây và đồ thị liên thông
 
--   Lý thuyết cây, Disjoint Set Union (Union-Find) ⇒ [Lý thuyết cây, DSU](https://github.com/Hphu309/Graph_Theory/blob/main/Tree_theory.pdf)
--   Spanning Tree, Minimum Spanning Tree (Kruskal, Prim), LCA ⇒ [Lý thuyết cây khung, LCA](https://github.com/Hphu309/Graph_Theory/blob/main/Cay_khung_LCA_theory.pdf)
+-   [Lý thuyết cây, DSU](https://github.com/Hphu309/Graph_Theory/blob/main/Tree_theory.pdf)
+-   [Spanning Tree, Minimum Spanning Tree (Kruskal, Prim), LCA](https://github.com/Hphu309/Graph_Theory/blob/main/Cay_khung_LCA_theory.pdf)
 
 
 ### 4️⃣ Quy hoạch động trên đồ thị
--   DP trên cây ⇒ [Thuật toán quy hoạch động trên cây](https://github.com/Hphu309/Graph_Theory/blob/main/Dp_on_tree_theory.pdf)
+-   [Thuật toán quy hoạch động trên cây](https://github.com/Hphu309/Graph_Theory/blob/main/Dp_on_tree_theory.pdf)
 
 
 
 ### [Một số bài tập ứng dụng](https://codeforces.com/group/n2atXbmeSj/contests)
-### [Solution](https://github.com/Hphu309/Graph_Theory/blob/main/Solution.pdf)
+## [Solution](https://github.com/Hphu309/Graph_Theory/blob/main/Solution.pdf)
 
 ------------------------------------------------------------------------
 
