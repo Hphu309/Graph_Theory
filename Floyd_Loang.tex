@@ -1,0 +1,172 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    frame=single,
+    language=C++
+}
+
+\title{Thuật toán Floyd-Warshall \& Loang trên bảng}
+\subtitle{Bổ sung nội dung lý thuyết và cài đặt}
+\author{Nhóm 7}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Nội dung bổ sung}
+\tableofcontents
+\end{frame}
+
+\section{Thuật toán Floyd-Warshall}
+
+\begin{frame}{Khái niệm Floyd-Warshall}
+\begin{itemize}
+    \item \textbf{Mục tiêu:} Tìm đường đi ngắn nhất giữa mọi cặp đỉnh $(u, v)$ trong đồ thị.
+    \item \textbf{Đặc điểm:} 
+    \begin{itemize}
+        \item Hoạt động trên đồ thị có hướng/vô hướng.
+        \item Chấp nhận trọng số cạnh âm.
+        \item Không hoạt động nếu đồ thị có chu trình âm.
+    \end{itemize}
+    \item \textbf{Ý tưởng:} Duyệt qua từng đỉnh trung gian $k$ để cập nhật khoảng cách giữa mọi cặp $(i, j)$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Công thức và Độ phức tạp}
+\begin{block}{Công thức truy hồi}
+Gọi $d[i][j]$ là khoảng cách ngắn nhất từ $i$ đến $j$:
+\[
+d[i][j] = \min(d[i][j], d[i][k] + d[k][j])
+\]
+Với $k$ là đỉnh trung gian đang xét.
+\end{block}
+
+\begin{itemize}
+    \item \textbf{Độ phức tạp thời gian:} $O(V^3)$ (3 vòng lặp lồng nhau).
+    \item \textbf{Độ phức tạp không gian:} $O(V^2)$ (Ma trận kề).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Cài đặt Floyd-Warshall (C++)}
+\begin{lstlisting}
+// Khoi tao: d[i][j] = trong so canh, d[i][i] = 0, con lai la INF
+void floydWarshall(int n) {
+    for (int k = 1; k <= n; ++k) { // Dinh trung gian k
+        for (int i = 1; i <= n; ++i) { // Dinh dau i
+            for (int j = 1; j <= n; ++j) { // Dinh cuoi j
+                if (d[i][k] < INF && d[k][j] < INF) {
+                    d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
+                }
+            }
+        }
+    }
+}
+\end{lstlisting}
+\end{frame}
+
+\section{Thuật toán Loang trên bảng}
+
+\begin{frame}{Khái niệm Loang (Flood Fill/BFS)}
+\begin{itemize}
+    \item \textbf{Phạm vi:} Thường áp dụng trên ma trận (lưới ô vuông) 2 chiều.
+    \item \textbf{Ứng dụng:} 
+    \begin{itemize}
+        \item Tìm đường đi ngắn nhất trên lưới không trọng số.
+        \item Đếm số lượng thành phần liên thông (vùng màu, vùng đất...).
+        \item Xác định các ô có thể đi tới từ một vị trí gốc.
+    \end{itemize}
+    \item \textbf{Kỹ thuật:} Sử dụng mảng hướng (Direction arrays) để di chuyển giữa các ô kề cạnh.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mô phỏng di chuyển trên lưới}
+\begin{columns}
+\column{0.5\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \draw[step=1cm,black,very thin] (0,0) grid (3,3);
+    \node[fill=red!20, minimum size=1cm] at (1.5,1.5) {$(x,y)$};
+    \draw[thick,->,blue] (1.5,1.5) -- (1.5,2.3) node[above] {\tiny $(x-1,y)$};
+    \draw[thick,->,blue] (1.5,1.5) -- (1.5,0.7) node[below] {\tiny $(x+1,y)$};
+    \draw[thick,->,blue] (1.5,1.5) -- (0.7,1.5) node[left] {\tiny $(x,y-1)$};
+    \draw[thick,->,blue] (1.5,1.5) -- (2.3,1.5) node[right] {\tiny $(x,y+1)$};
+\end{tikzpicture}
+\column{0.5\textwidth}
+\textbf{Mảng hướng (4 hướng):}
+\begin{itemize}
+    \item \texttt{dx[] = \{-1, 1, 0, 0\}}
+    \item \texttt{dy[] = \{0, 0, -1, 1\}}
+\end{itemize}
+\textbf{Tọa độ mới:}
+\[ nx = x + dx[i], ny = y + dy[i] \]
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Cài đặt Loang bằng BFS (C++)}
+\begin{lstlisting}
+void bfs_loang(int r, int c) {
+    queue<pair<int, int>> q;
+    q.push({r, c});
+    visited[r][c] = true;
+    dist[r][c] = 0;
+    while (!q.empty()) {
+        auto [x, y] = q.front(); q.pop();
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i], ny = y + dy[i];
+            if (nx >= 1 && nx <= N && ny >= 1 && ny <= M && !visited[nx][ny] && a[nx][ny] != '#') {
+                visited[nx][ny] = true;
+                dist[nx][ny] = dist[x][y] + 1;
+                q.push({nx, ny});
+            }
+        }
+    }
+}
+\end{lstlisting}
+\end{frame}
+
+\section{Kết luận}
+
+\begin{frame}{So sánh nhanh}
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Tiêu chí} & \textbf{Floyd-Warshall} & \textbf{Loang (BFS)} \\ \hline
+Đối tượng & Đồ thị tổng quát & Bảng lưới/Đồ thị không trọng số \\ \hline
+Mục tiêu & All-pairs shortest path & Single-source shortest path \\ \hline
+Độ phức tạp & $O(V^3)$ & $O(R \times C)$ \\ \hline
+Ưu điểm & Đơn giản, xử lý cạnh âm & Rất nhanh trên ma trận lớn \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\centering
+\Huge
+Cảm ơn các bạn đã lắng nghe!
+\end{frame}
+
+\end{document}
