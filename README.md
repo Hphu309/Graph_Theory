@@ -35,7 +35,7 @@ tảng học thuật đến triển khai thuật toán thực tế.
 ## 📚 Nội dung chính
 
 ### 1️⃣ Kiến thức nền tảng
-
+[Lý thuyết đồ thị](https://github.com/Hphu309/Graph_Theory/blob/main/Graph.pdf)
 -   Khái niệm đồ thị
 -   Biểu diễn đồ thị
 -   Phân loại đồ thị
