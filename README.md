@@ -44,7 +44,7 @@ tảng học thuật đến triển khai thuật toán thực tế.
 ### 2️⃣ Thuật toán duyệt đồ thị
 
 -   DFS (Depth-First Search)
--   BFS (Breadth-First Search)
+-   BFS, loang bảng (Breadth-First Search)
 -   Ứng dụng duyệt đồ thị
 
 ### 3️⃣ Đường đi ngắn nhất
