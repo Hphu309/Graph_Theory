@@ -26,8 +26,6 @@ tảng học thuật đến triển khai thuật toán thực tế.
 
 -   Hệ thống hóa kiến thức Lý thuyết Đồ thị
 -   Minh họa bằng ví dụ trực quan
--   Cung cấp cài đặt thuật toán chuẩn Competitive Programming
--   Tối ưu hiệu năng cho dữ liệu lớn
 -   Làm tài liệu học tập & ôn luyện cho học sinh -- sinh viên
 
 ------------------------------------------------------------------------
